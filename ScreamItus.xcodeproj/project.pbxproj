@@ -14,6 +14,7 @@
 		058CD843233386850087E72C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058CD841233386850087E72C /* LaunchScreen.storyboard */; };
 		058CD84B233388BA0087E72C /* Infection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058CD84A233388BA0087E72C /* Infection.swift */; };
 		27E4A9212333C90400877BA5 /* ScreamItus_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4A9202333C90400877BA5 /* ScreamItus_IOSTests.swift */; };
+		27E4A92F2333D55700877BA5 /* ScreamItusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E4A92E2333D55700877BA5 /* ScreamItusUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +24,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 058CD834233386850087E72C;
 			remoteInfo = "ScreamItus-IOS";
+		};
+		27E4A9312333D55700877BA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 058CD82D233386850087E72C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 058CD834233386850087E72C;
+			remoteInfo = ScreamItus;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -38,6 +46,9 @@
 		27E4A91E2333C90400877BA5 /* ScreamItusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreamItusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E4A9202333C90400877BA5 /* ScreamItus_IOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreamItus_IOSTests.swift; sourceTree = "<group>"; };
 		27E4A9222333C90400877BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E4A92C2333D55700877BA5 /* ScreamItusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreamItusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E4A92E2333D55700877BA5 /* ScreamItusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreamItusUITests.swift; sourceTree = "<group>"; };
+		27E4A9302333D55700877BA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27E4A9292333D55700877BA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +81,7 @@
 			children = (
 				058CD837233386850087E72C /* ScreamItus */,
 				27E4A91F2333C90400877BA5 /* ScreamItus-IOSTests */,
+				27E4A92D2333D55700877BA5 /* ScreamItusUITests */,
 				058CD836233386850087E72C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +91,7 @@
 			children = (
 				058CD835233386850087E72C /* ScreamItus.app */,
 				27E4A91E2333C90400877BA5 /* ScreamItusTests.xctest */,
+				27E4A92C2333D55700877BA5 /* ScreamItusUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +117,15 @@
 				27E4A9222333C90400877BA5 /* Info.plist */,
 			);
 			path = "ScreamItus-IOSTests";
+			sourceTree = "<group>";
+		};
+		27E4A92D2333D55700877BA5 /* ScreamItusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27E4A92E2333D55700877BA5 /* ScreamItusUITests.swift */,
+				27E4A9302333D55700877BA5 /* Info.plist */,
+			);
+			path = ScreamItusUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +166,24 @@
 			productReference = 27E4A91E2333C90400877BA5 /* ScreamItusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		27E4A92B2333D55700877BA5 /* ScreamItusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E4A9332333D55700877BA5 /* Build configuration list for PBXNativeTarget "ScreamItusUITests" */;
+			buildPhases = (
+				27E4A9282333D55700877BA5 /* Sources */,
+				27E4A9292333D55700877BA5 /* Frameworks */,
+				27E4A92A2333D55700877BA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E4A9322333D55700877BA5 /* PBXTargetDependency */,
+			);
+			name = ScreamItusUITests;
+			productName = ScreamItusUITests;
+			productReference = 27E4A92C2333D55700877BA5 /* ScreamItusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +199,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					27E4A91D2333C90400877BA5 = {
+						CreatedOnToolsVersion = 10.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 058CD834233386850087E72C;
+					};
+					27E4A92B2333D55700877BA5 = {
 						CreatedOnToolsVersion = 10.3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 058CD834233386850087E72C;
@@ -173,6 +225,7 @@
 			targets = (
 				058CD834233386850087E72C /* ScreamItus */,
 				27E4A91D2333C90400877BA5 /* ScreamItusTests */,
+				27E4A92B2333D55700877BA5 /* ScreamItusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +242,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		27E4A91C2333C90400877BA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E4A92A2333D55700877BA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -216,6 +276,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27E4A9282333D55700877BA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E4A92F2333D55700877BA5 /* ScreamItusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -223,6 +291,11 @@
 			isa = PBXTargetDependency;
 			target = 058CD834233386850087E72C /* ScreamItus */;
 			targetProxy = 27E4A9232333C90400877BA5 /* PBXContainerItemProxy */;
+		};
+		27E4A9322333D55700877BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 058CD834233386850087E72C /* ScreamItus */;
+			targetProxy = 27E4A9312333D55700877BA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +495,45 @@
 			};
 			name = Release;
 		};
+		27E4A9342333D55700877BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScreamItusUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = carlosbulado.ScreamItusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreamItus;
+			};
+			name = Debug;
+		};
+		27E4A9352333D55700877BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ScreamItusUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = carlosbulado.ScreamItusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreamItus;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -448,6 +560,15 @@
 			buildConfigurations = (
 				27E4A9252333C90400877BA5 /* Debug */,
 				27E4A9262333C90400877BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E4A9332333D55700877BA5 /* Build configuration list for PBXNativeTarget "ScreamItusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E4A9342333D55700877BA5 /* Debug */,
+				27E4A9352333D55700877BA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
