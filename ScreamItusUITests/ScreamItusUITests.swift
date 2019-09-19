@@ -8,7 +8,8 @@
 
 import XCTest
 
-class ScreamItusUITests: XCTestCase {
+class ScreamItusUITests: XCTestCase
+{
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -25,19 +26,6 @@ class ScreamItusUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() {
-        
-        let app = XCUIApplication()
-        app.otherElements.containing(.staticText, identifier:"Infection Calculator").children(matching: .textField).element.tap()
-        
-        let calculateButton = app.buttons["Calculate"]
-        calculateButton.tap()
-        calculateButton.tap()
-        app.staticTexts["5 instructors infected"].tap()
-                // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
     
     func testAppLoads()
     {
@@ -46,9 +34,27 @@ class ScreamItusUITests: XCTestCase {
         let button = app.buttons["Calculate"]
         let resultLabel = app.staticTexts["1000 instructors infected"]
         
-        XCTAssertNotNil(textBox)
-        XCTAssertNotNil(button)
-        XCTAssertNil(resultLabel)
+        XCTAssertTrue(textBox.exists)
+        XCTAssertTrue(button.exists)
+        XCTAssertFalse(resultLabel.exists)
     }
-
+    
+    func testCalculateButtonActuallyCalculates()
+    {
+        let app = XCUIApplication()
+        let textField = app.otherElements.containing(.staticText, identifier:"Infection Calculator").children(matching: .textField).element
+        textField.tap()
+        textField.typeText("1")
+        let button = app.buttons["Calculate"]
+        button.tap()
+        var resultLabel = app.staticTexts["5 instructors infected"]
+        
+        XCTAssertTrue(resultLabel.exists)
+        
+        textField.typeText("3")
+        button.tap()
+        resultLabel = app.staticTexts["44 instructors infected"]
+        
+        XCTAssertTrue(resultLabel.exists)
+    }
 }
