@@ -27,8 +27,28 @@ class ScreamItusUITests: XCTestCase {
     }
 
     func testExample() {
-        // Use recording to get started writing UI tests.
+        
+        let app = XCUIApplication()
+        app.otherElements.containing(.staticText, identifier:"Infection Calculator").children(matching: .textField).element.tap()
+        
+        let calculateButton = app.buttons["Calculate"]
+        calculateButton.tap()
+        calculateButton.tap()
+        app.staticTexts["5 instructors infected"].tap()
+                // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testAppLoads()
+    {
+        let app = XCUIApplication()
+        let textBox = app.otherElements.containing(.staticText, identifier:"Infection Calculator").children(matching: .textField).element
+        let button = app.buttons["Calculate"]
+        let resultLabel = app.staticTexts["1000 instructors infected"]
+        
+        XCTAssertNotNil(textBox)
+        XCTAssertNotNil(button)
+        XCTAssertNil(resultLabel)
     }
 
 }
