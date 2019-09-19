@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ScreamItus-IOS.xcodeproj">
+      location = "self:/Users/cjb/QA_Test_002/ScreamItus.xcodeproj">
    </FileRef>
 </Workspace>

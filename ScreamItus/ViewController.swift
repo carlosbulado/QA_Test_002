@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         }
 
 //        // uncomment this text when ready to do your UI tests
-//        let infection:Infection = Infection()
-//        let numInfected = infection.calculateTotalInfected(day:numDays)
-//        resultsLabel.text = "\(numInfected) instructors infected"
+        let infection:Infection = Infection()
+        let numInfected = infection.calculateTotalInfected(day:numDays)
+        resultsLabel.text = "\(numInfected) instructors infected"
         
     }
     

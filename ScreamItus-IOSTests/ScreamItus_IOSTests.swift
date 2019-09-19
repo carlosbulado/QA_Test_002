@@ -8,26 +8,29 @@
 
 import XCTest
 
-class ScreamItus_IOSTests: XCTestCase {
+@testable import ScreamItus
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class ScreamItus_IOSTests: XCTestCase
+{
+    var infection: Infection!
+
+    override func setUp()
+    {
+        infection = Infection()
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown()
+    {
+        infection = nil
+        super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testNumberOfDaysGreaterThan0() {
+        var infecLessThan0 = infection.calculateTotalInfected(day: -1);
+        var infec0 = infection.calculateTotalInfected(day: 0);
+        
+        XCTAssertEqual(-1, infecLessThan0);
+        XCTAssertEqual(-1, infec0);
     }
 
 }

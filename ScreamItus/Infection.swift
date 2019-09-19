@@ -9,5 +9,8 @@
 import Foundation
 class Infection
 {
-    
+    func calculateTotalInfected(day : Int) -> Int
+    {
+        return 0;
+    }
 }
