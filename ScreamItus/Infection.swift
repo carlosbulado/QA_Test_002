@@ -11,8 +11,23 @@ class Infection
 {
     func calculateTotalInfected(day : Int) -> Int
     {
-        if(day <= 0) { return -1 }
-        if(day <= 7) { return day * 5 }
-        else { return 35 + ((day - 7) * 8) }
+        var infected = 0;
+        if(day <= 0) { infected = -1 }
+        else if(day <= 7)
+        {
+            for index in 1...day
+            {
+                if(index % 2 == 1) { infected += 5 }
+            }
+        }
+        else
+        {
+            infected += 20;
+            for index in 8...day
+            {
+                if(index % 2 == 1) { infected += 8 }
+            }
+        }
+        return infected;
     }
 }

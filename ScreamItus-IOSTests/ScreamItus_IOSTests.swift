@@ -41,8 +41,8 @@ class ScreamItus_IOSTests: XCTestCase
         var infectedDay7 = infection.calculateTotalInfected(day: 7);
         
         XCTAssertEqual(5, infectedDay1);
-        XCTAssertEqual(25, infectedDay5);
-        XCTAssertEqual(35, infectedDay7);
+        XCTAssertEqual(15, infectedDay5);
+        XCTAssertEqual(20, infectedDay7);
     }
     
     func testInfectionsPerDayAfter7Days()
@@ -51,9 +51,9 @@ class ScreamItus_IOSTests: XCTestCase
         var infectedDay13 = infection.calculateTotalInfected(day: 13);
         var infectedDay21 = infection.calculateTotalInfected(day: 21);
         
-        XCTAssertEqual(43, infectedDay8);
-        XCTAssertEqual(83, infectedDay13);
-        XCTAssertEqual(147, infectedDay21);
+        XCTAssertEqual(20, infectedDay8);
+        XCTAssertEqual(44, infectedDay13);
+        XCTAssertEqual(76, infectedDay21);
     }
     
     func testIfPriteshMOhammadOrAlbertAreAtTheCollege()
@@ -63,9 +63,9 @@ class ScreamItus_IOSTests: XCTestCase
         var infectedDay16 = infection.calculateTotalInfected(day: 16);
         var infectedDay21 = infection.calculateTotalInfected(day: 21);
         
-        XCTAssertEqual(14, infectedDay8);
-        XCTAssertEqual(38, infectedDay13);
-        XCTAssertEqual(46, infectedDay16);
-        XCTAssertEqual(70, infectedDay21);
+        XCTAssertEqual(20, infectedDay8);
+        XCTAssertEqual(44, infectedDay13);
+        XCTAssertEqual(52, infectedDay16);
+        XCTAssertEqual(76, infectedDay21);
     }
 }
