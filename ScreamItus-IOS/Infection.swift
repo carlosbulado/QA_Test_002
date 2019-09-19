@@ -7,6 +7,7 @@
 //
 
 import Foundation
-class Infection {
+class Infection
+{
     
 }
