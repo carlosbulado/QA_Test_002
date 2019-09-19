@@ -36,13 +36,11 @@ class ScreamItus_IOSTests: XCTestCase
     func testInfectionsPerDay() {
         var infectedDay1 = infection.calculateTotalInfected(day: 1);
         var infectedDay5 = infection.calculateTotalInfected(day: 5);
-        var infectedDay10 = infection.calculateTotalInfected(day: 10);
-        var infectedDay15 = infection.calculateTotalInfected(day: 15);
+        var infectedDay7 = infection.calculateTotalInfected(day: 7);
         
         XCTAssertEqual(5, infectedDay1);
         XCTAssertEqual(25, infectedDay5);
-        XCTAssertEqual(50, infectedDay10);
-        XCTAssertEqual(75, infectedDay15);
+        XCTAssertEqual(35, infectedDay7);
     }
     
     func testInfectionsPerDayAfter7Days() {
@@ -52,7 +50,7 @@ class ScreamItus_IOSTests: XCTestCase
         
         XCTAssertEqual(43, infectedDay8);
         XCTAssertEqual(83, infectedDay13);
-        XCTAssertEqual(167, infectedDay21);
+        XCTAssertEqual(147, infectedDay21);
     }
 
 }

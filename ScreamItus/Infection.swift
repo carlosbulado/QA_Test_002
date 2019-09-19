@@ -12,6 +12,7 @@ class Infection
     func calculateTotalInfected(day : Int) -> Int
     {
         if(day <= 0) { return -1 }
-        return day * 5;
+        if(day <= 7) { return day * 5 }
+        else { return 35 + ((day - 7) * 8) }
     }
 }
